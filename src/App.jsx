@@ -1,11 +1,7 @@
-import './App.css'
+import { Prueba } from './components/Prueba'
 
 function App() {
-  return (
-    <>
-      <div className='bg-blue-500 text-white p-4 rounded-md'>Dinsey+</div>
-    </>
-  )
+  return <Prueba />
 }
 
 export default App
