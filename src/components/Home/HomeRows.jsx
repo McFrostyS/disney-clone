@@ -6,7 +6,7 @@ export function HomeRows() {
   return (
     <section className=''>
       <HomeRow title={'Continue Watching'} fetch={requests.fetchRandom} />
-      <HomeRowPoster title={'Trending'} fetch={requests.fetchMarvelPhases} />
+      <HomeRowPoster title={'Marvel'} fetch={requests.fetchMarvelPhases} />
       <HomeRow title={'Disney Movies'} fetch={requests.fetchDisney} />
       <HomeRow title={'Cars'} fetch={requests.fetchCars} />
       <HomeRow title={'Pixar Movies'} fetch={requests.fetchPixar} />

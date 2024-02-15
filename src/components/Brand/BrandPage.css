@@ -1,3 +1,4 @@
+/* ::after para que el fondo no se superponga al contenido */
 .brandPage::after {
   content: '';
   position: fixed;
@@ -11,34 +12,15 @@
   background: rgb(26, 29, 41);
   background: linear-gradient(
     180deg,
-    rgba(26, 29, 41, 0.3225665266106442) 0%,
+    rgba(26, 29, 41, 0.33) 0%,
     rgba(26, 29, 41, 1) 100%
   );
 }
-.brandPage__background {
+.background {
   position: fixed;
   width: 100%;
   top: 0;
   right: 0;
   left: 0;
   z-index: -1;
-}
-.brandPage__background > img {
-  width: 100%;
-}
-.brandPage__image {
-  text-align: center;
-}
-@media (min-width: 992px) {
-  .brandPage__image {
-    text-align: center;
-    min-height: 70vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 30vh;
-  }
-  .brandPage__image > img {
-    max-width: 30vw;
-  }
 }

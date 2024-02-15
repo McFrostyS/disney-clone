@@ -41,26 +41,41 @@ export function DetailPage() {
     <>
       <Header />
       <main className='detailPage'>
-        <div className='detailPage__background'>
-          <div className='detailPage__overlay'></div>
+        <div className='fixed w-full z-0'>
+          <div className='overlay'></div>
           <img
-            className='bg-cover bg-center h-screen'
+            className='bg-cover bg-center h-screen w-full opacity-50'
             style={{
               backgroundImage: backgroundImage
             }}
           ></img>
         </div>
-        <div className='detailPage__info'>
+        <div className='pt-[40vh] pl-[60px] text-white relative self-center w-full'>
           <div className='detailPage__container'>
-            <h1 className='detailPage__title'>{singleMovie['title']}</h1>
-            <div className='detaiPage__buttons'>
-              <Button className='detailPage__playBtn' startIcon={<PlayArrowIcon />}>
+            <h1 className='text-zinc-100 text-3xl mb-6 font-bold'>
+              {singleMovie['title']}
+            </h1>
+            <div className='data text-[13px]'>
+              <span className=''>{singleMovie['release_date']}</span>
+              <span className=''>{singleMovie['runtime'] + ' minutes'}</span>
+            </div>
+            <div className='genres mb-[35px] text-[13px]'>
+              {Array.isArray(singleMovie.genres) == true
+                ? singleMovie.genres.map((genre, index) => (
+                    <span key={index} className=''>
+                      {genre.name}
+                    </span>
+                  ))
+                : null}
+            </div>
+            <div className='buttons mb-5'>
+              <Button className='playBtn' startIcon={<PlayArrowIcon />}>
                 Watch Now
               </Button>
-              <Button className='detailPage__trailerBtn' onClick={handleOpen}>
+              <Button className='trailerBtn' onClick={handleOpen}>
                 Trailer
               </Button>
-              <IconButton size='small' className='detailPage_radialBtn'>
+              <IconButton size='small' className='addBtn'>
                 <AddIcon />
               </IconButton>
             </div>
@@ -78,30 +93,17 @@ export function DetailPage() {
                 )}
               </div>
             </Modal>
-            <div className='detailPage__data'>
-              <span className='detailPage__years'>{singleMovie['release_date']}</span>
-              <span className='detailPage__duration'>
-                {singleMovie['runtime'] + ' minutes'}
-              </span>
-              {Array.isArray(singleMovie.genres) == true
-                ? singleMovie.genres.map((genre, index) => (
-                    <span key={index} className='detailPage__genres'>
-                      {genre.name}
-                    </span>
-                  ))
-                : null}
-            </div>
             <div className='max-w-[800px] text-base mb-10'>
-              <p>{singleMovie['overview']}</p>
+              <p className='text-xl'>{singleMovie['overview']}</p>
             </div>
-            <AppBar className='detailPage__tabsHeader' position='static'>
+            <AppBar className='tabsHeader' position='static'>
               <Tabs value={value} onChange={handleChange}>
                 <Tab className={value === 0 ? 'active' : ''} label='Suggestions' />
                 <Tab className={value === 1 ? 'active' : ''} label='Extras' />
                 <Tab className={value === 2 ? 'active' : ''} label='Details' />
               </Tabs>
             </AppBar>
-            <TabPanel className='tab__panel' value={value} index={0}>
+            <TabPanel className='tabPanel' value={value} index={0}>
               <Slider className='homeSlider' {...sliderConfig}>
                 {recommended.map((recommendedSingleMovie) => (
                   <div className='relative p-2' key={recommendedSingleMovie.id}>
@@ -113,7 +115,7 @@ export function DetailPage() {
                 ))}
               </Slider>
             </TabPanel>
-            <TabPanel className='tab__panel' value={value} index={1}>
+            <TabPanel className='tabPanel' value={value} index={1}>
               {videos.length > 0 ? (
                 videos.slice(0, 1).map((video, index) => (
                   <div key={index}>
@@ -130,34 +132,44 @@ export function DetailPage() {
                 <p>There isn´t extra content</p>
               )}
             </TabPanel>
-            <TabPanel className='tab__panel' value={value} index={2}>
-              <div className='tab__container'>
-                <div className='tab__mainColumn'>
+            <TabPanel className='tabPanel' value={value} index={2}>
+              <div className='flex'>
+                <div className='flex-[0.5]'>
                   <h2 className='mb-3 font-bold text-3xl'>{singleMovie['title']}</h2>
                   <p className='mb-3 text-xl'>{singleMovie['overview']}</p>
                 </div>
-                <div className='tab__itemsColumn'>
-                  <div className='tab_itemSubColumn'>
+                <div className='itemsColumn'>
+                  <div className=''>
                     <div className='mb-4'>
-                      <h3 className='tab__subtitle'>Duration:</h3>
+                      <h3 className='text-sm text-zinc-300 font-thin mb-[2px]'>
+                        Duration:
+                      </h3>
                       <p>{singleMovie['runtime']} minutes</p>
                     </div>
                     <div className='mb-4'>
-                      <h3 className='tab__subtitle'>Release Date:</h3>
+                      <h3 className='text-sm text-zinc-300 font-thin mb-[2px]'>
+                        Release Date:
+                      </h3>
                       <p>{singleMovie['release_date']}</p>
                     </div>
-                  </div>
-                  <div className='tab__itemSubColumn'>
                     <div className='mb-4'>
-                      <h3 className='tab__subtitle'>Genres:</h3>
-                      {Array.isArray(singleMovie.genres) == true
-                        ? singleMovie.genres.map((genre, index) => (
-                            <p key={index}>{genre.name}</p>
-                          ))
-                        : null}
+                      <h3 className='text-sm text-zinc-300 font-thin mb-[2px]'>
+                        Genres:
+                      </h3>
+                      <div className='genres'>
+                        {Array.isArray(singleMovie.genres) == true
+                          ? singleMovie.genres.slice(0, 3).map((genre, index) => (
+                              <span key={index} className=''>
+                                {genre.name}
+                              </span>
+                            ))
+                          : null}
+                      </div>
                     </div>
+                  </div>
+                  <div className=''>
                     <div className='mb-4'>
-                      <h3 className='tab__subtitle'>Cast:</h3>
+                      <h3 className='text-sm text-zinc-300 font-thin mb-[2px]'>Cast:</h3>
                       {cast.slice(0, 4).map((actor, index) => (
                         <p key={index}>{actor.name}</p>
                       ))}

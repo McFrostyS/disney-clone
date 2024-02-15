@@ -15,15 +15,16 @@ export const BrandPage = () => {
     <>
       <Header />
       <main className='brandPage'>
-        <div className='brandPage__background'>
+        <div className='background'>
           <video
             autoPlay
             src={`/src/assets/videos/${brand}-bg.mp4`}
             onEnded={(e) => e.currentTarget.load()}
+            className='w-full'
           ></video>
         </div>
-        <div className='brandPage__image'></div>
-        <div className='brandPage__movies movieRows__container'>
+        <div className='min-h-[70vh] h-[30vh]'></div>
+        <div className=''>
           {brand === 'marvel' ? (
             <>
               <HomeRow title='Marvel Universe' fetch={requests.fetchMarvel} />
