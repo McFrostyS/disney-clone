@@ -1,0 +1,70 @@
+.homeSliderPoster .slick-prev,
+.homeSliderPoster .slick-next {
+  z-index: 1;
+  top: 0;
+  bottom: 15%;
+  margin: auto;
+  width: 50px;
+  height: 20px;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.homeSliderPoster .slick-prev::after,
+.homeSliderPoster .slick-next::after {
+  content: '';
+  position: absolute;
+  top: -55px;
+  bottom: -72px;
+  left: -20px;
+  right: 0px;
+}
+
+.homeSliderPoster .slick-prev:hover::after,
+.homeSliderPoster .slick-next:hover::after {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.homeSliderPoster .slick-prev:before,
+.homeSliderPoster .slick-next:before {
+  content: '';
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  border-width: 3px;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-style: solid;
+  border-color: white;
+}
+
+.homeSliderPoster .slick-prev:before {
+  border-width: 3px 0 0 3px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.homeSliderPoster .slick-next:before {
+  border-width: 3px 3px 0 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.homeSliderPoster .slick-prev {
+  left: 10px;
+}
+
+.homeSliderPoster .slick-next {
+  right: 10px;
+}
+
+.homeSliderPoster .slick-list {
+  padding: 20px;
+  min-height: 400px;
+}

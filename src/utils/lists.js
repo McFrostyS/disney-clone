@@ -1,0 +1,31 @@
+import { API_KEY, API_URL } from '../services/api'
+
+export const requests = {
+  fetchSimpsons: `${API_URL}/list/7067554?api_key=${API_KEY}&language=en-US`,
+  fetchDisneyClassics: `${API_URL}/list/338?api_key=${API_KEY}&language=en-US`,
+  fetchDisney: `${API_URL}/list/5905?api_key=${API_KEY}&language=en-US`,
+  fetchDisneySeries: `${API_URL}/list/7067611?api_key=${API_KEY}&language=en-US`,
+  fetchPixar: `${API_URL}/list/9095?api_key=${API_KEY}&language=en-US`,
+  fetchDocumentaries: `${API_URL}/list/7067555?api_key=${API_KEY}&language=en-US`,
+  fetchNationalMovies: `${API_URL}/list/7067613?api_key=${API_KEY}&language=en-US`,
+  fetchStar: `${API_URL}/list/7067604?api_key=${API_KEY}&language=en-US`,
+  fetchMarvel: `${API_URL}/list/1?api_key=${API_KEY}&language=en-US`,
+  fetchMarvelPhases: `${API_URL}/list/8920?api_key=${API_KEY}&language=en-US`,
+  fetchMarvelPhaseOne: `${API_URL}/list/1271?api_key=${API_KEY}&language=en-US&sort_by=vote_average.asc`,
+  fetchMarvelPhaseTwo: `${API_URL}/list/3204?api_key=${API_KEY}&language=en-US&sort_by=vote_average.asc`,
+  fetchMarvelPhaseThree: `${API_URL}/list/7067552?api_key=${API_KEY}&language=en-US&sort_by=vote_average.asc`,
+  fetchUnexpectedHeroes: `${API_URL}/list/7067606?api_key=${API_KEY}&language=en-US&sort_by=vote_average.asc`,
+  fetchToyStory: `${API_URL}/list/7067603?api_key=${API_KEY}&language=en-US`,
+  fetchCars: `${API_URL}/list/7067605?api_key=${API_KEY}&language=en-US`,
+  fetchStarWars: `${API_URL}/list/8136?api_key=${API_KEY}&language=en-US`,
+  fetchStarWarsLego: `${API_URL}/list/7067607?api_key=${API_KEY}&language=en-US`,
+  fetchRandom: `${API_URL}/list/7068720?api_key=${API_KEY}&language=en-US`,
+  fetchTrending: `${API_URL}/trending/all/week?api_key=${API_KEY}&language=en-US`,
+  fetchActionMovies: `${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=28&language=en-US`,
+  fetchComedyMovies: `${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=35&language=en-US`,
+  fetchDramaMovies: `${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=18&language=en-US`,
+  fetchPopularMovies: `${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US`,
+  fetchPopularSeries: `${API_URL}/tv/popular?api_key=${API_KEY}&language=en-US`,
+  fetchRecentMovies: `${API_URL}/movie/now_playing?api_key=${API_KEY}&language=en-US`,
+  fetchTopRatedMovies: `${API_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US`
+}

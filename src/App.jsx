@@ -1,7 +1,20 @@
-import { Prueba } from './components/Prueba'
+import { BrandPage } from './components/Brand/BrandPage'
+import { DetailPage } from './components/DetailPage/DetailPage'
+import { Home } from './components/Home/Home'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
-  return <Prueba />
+  return (
+    <>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/play/:movieId' element={<DetailPage />} />
+          <Route path='/brand/:brand' element={<BrandPage />} />
+        </Routes>
+      </Router>
+    </>
+  )
 }
 
 export default App

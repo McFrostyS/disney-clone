@@ -1,0 +1,80 @@
+.slick-dots {
+  display: block;
+  list-style: none;
+  position: absolute;
+  text-align: right;
+  bottom: 20px;
+  margin: 0px;
+  padding: 0px;
+  right: 110px;
+  width: 100%;
+}
+
+.imageSlider .slick-dots li button::before {
+  content: '•';
+  color: rgb(150, 158, 171);
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+}
+.imageSlider .slick-dots li.slick-active button::before {
+  color: rgb(249, 249, 249);
+}
+
+.imageSlider .slick-prev,
+.imageSlider .slick-next {
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 50px;
+  height: 20px;
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.imageSlider .slick-prev:before,
+.imageSlider .slick-next:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-width: 3px;
+
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-style: solid;
+  border-color: white;
+}
+
+.imageSlider .slick-prev:before {
+  border-width: 3px 0 0 3px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.imageSlider .slick-next:before {
+  border-width: 3px 3px 0 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.imageSlider .slick-prev {
+  left: 20px;
+}
+
+.imageSlider .slick-next {
+  right: 20px;
+}
