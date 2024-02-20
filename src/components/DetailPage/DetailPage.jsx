@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { sliderConfig } from '../../utils/sliderConfg'
-import { Header } from '../Header/Header'
 import { MovieCard } from '../Movie/MovieCard'
 import Slider from 'react-slick'
 import useDetailPage from '../../hooks/useDetailPage'
@@ -39,7 +38,6 @@ export function DetailPage() {
 
   return (
     <>
-      <Header />
       <main className='detailPage'>
         <div className='fixed w-full z-0'>
           <div className='overlay'></div>

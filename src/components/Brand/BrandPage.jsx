@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { HomeRow } from '../Home/HomeRow'
 import { requests } from '../../utils/lists'
 import { useParams } from 'react-router-dom'
-import { Header } from '../Header/Header'
 
 import './BrandPage.css'
 
@@ -13,7 +12,6 @@ export const BrandPage = () => {
   }, [])
   return (
     <>
-      <Header />
       <main className='brandPage'>
         <div className='background'>
           <video
