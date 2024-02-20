@@ -17,7 +17,9 @@ const useDetailPage = (movieId) => {
       )
       const data = await response.json()
       setSingleMovie(data)
-      setVideos(data.videos.results)
+
+      const trailers = data.videos.results.filter((video) => video.type === 'Trailer')
+      setVideos(trailers)
     }
 
     // Fetch recommended movies

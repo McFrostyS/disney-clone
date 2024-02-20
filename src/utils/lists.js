@@ -25,7 +25,6 @@ export const requests = {
   fetchComedyMovies: `${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=35&language=en-US`,
   fetchDramaMovies: `${API_URL}/discover/movie?api_key=${API_KEY}&with_genres=18&language=en-US`,
   fetchPopularMovies: `${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US`,
-  fetchPopularSeries: `${API_URL}/tv/popular?api_key=${API_KEY}&language=en-US`,
   fetchRecentMovies: `${API_URL}/movie/now_playing?api_key=${API_KEY}&language=en-US`,
   fetchTopRatedMovies: `${API_URL}/movie/top_rated?api_key=${API_KEY}&language=en-US`
 }
