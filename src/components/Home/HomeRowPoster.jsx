@@ -23,7 +23,7 @@ export const HomeRowPoster = ({ fetch, title }) => {
           </Slider>
         </article>
       ) : (
-        <Skeleton animation='wave' variant='rect' width='100%' height={200} />
+        <Skeleton animation='wave' variant='rect' width='100%' height={350} />
       )}
     </>
   )

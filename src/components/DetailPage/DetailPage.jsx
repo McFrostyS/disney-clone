@@ -48,9 +48,9 @@ export function DetailPage() {
             }}
           ></img>
         </div>
-        <div className='pt-[40vh] pl-[60px] text-white relative self-center w-full'>
+        <div className='pt-[30vh] pl-[75px] text-white relative self-center w-full'>
           <div className='detailPage__container'>
-            <h1 className='text-zinc-100 text-3xl mb-6 font-bold'>
+            <h1 className='text-zinc-100 text-5xl mb-6 font-bold'>
               {singleMovie['title']}
             </h1>
             <div className='data text-[13px]'>

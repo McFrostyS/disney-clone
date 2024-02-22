@@ -92,27 +92,33 @@ export function Header() {
   const menu = [
     {
       name: 'HOME',
-      icon: Home
+      icon: Home,
+      link: '/'
     },
     {
       name: 'SEARCH',
-      icon: Search
+      icon: Search,
+      link: '/search'
     },
     {
       name: 'WATCH LIST',
-      icon: AddRoundedIcon
+      icon: AddRoundedIcon,
+      link: '/'
     },
     {
       name: 'ORIGINALS',
-      icon: Originals
+      icon: Originals,
+      link: '/'
     },
     {
       name: 'MOVIES',
-      icon: Movies
+      icon: Movies,
+      link: '/'
     },
     {
       name: 'SERIES',
-      icon: Series
+      icon: Series,
+      link: '/'
     }
   ]
 
@@ -141,7 +147,7 @@ export function Header() {
         </Link>
         <div className='flex gap-8'>
           {menu.map((item, index) => (
-            <HeaderItem key={index} name={item.name} Icon={item.icon} />
+            <HeaderItem key={index} name={item.name} Icon={item.icon} link={item.link} />
           ))}
         </div>
       </div>

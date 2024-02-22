@@ -7,7 +7,7 @@ export function MovieCardPoster({ movie }) {
       <Link to={`/play/${movie.id}`}>
         <img
           src={imageUrlBaseOriginal + movie.poster_path}
-          className='w-[110px] md:w-[200px] rounded-lg hover:border-[3px] 
+          className='w-[280px] h-[350px] rounded-lg hover:border-[3px] 
                   border-gray-100 cursor-pointer shadow-xl shadow-black hover:scale-110 transition-all ease-in'
           alt={movie.title || movie.name}
         />

@@ -33,6 +33,7 @@ button.trailerBtn {
   padding: 13px 20px;
   width: auto;
   margin-bottom: 0;
+  font-weight: bold;
 }
 button.trailerBtn,
 button.addBtn {
