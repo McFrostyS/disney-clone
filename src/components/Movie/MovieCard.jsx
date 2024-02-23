@@ -13,7 +13,7 @@ export function MovieCard({ movie }) {
         <img
           src={imageUrl}
           className='w-[260px] rounded-lg shadow-xl 
-          shadow-black hover:border-[3px] border-gray-100 cursor-pointer'
+          shadow-black border-[3px] border-[#1A1D29] hover:border-gray-100 cursor-pointer'
           alt={movie.title || movie.name}
         />
 

@@ -1,10 +1,17 @@
+import { Link } from 'react-router-dom'
 import logo from '../../assets/Images/logo.png'
 
 export function Footer() {
   return (
     <footer className='bg-[#0E0B14] h-[150px] relative z-10'>
       <div className='flex items-center justify-center'>
-        <img src={logo} alt='logo' className='w-[80px] md:w-[115px] object-cover mt-5' />
+        <Link to='/'>
+          <img
+            src={logo}
+            alt='logo'
+            className='w-[80px] md:w-[115px] object-cover mt-5'
+          />
+        </Link>
       </div>
       <div className='p-5'>
         <ul className='flex items-center justify-center text-xs'>

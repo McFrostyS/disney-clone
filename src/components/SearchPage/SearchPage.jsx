@@ -1,5 +1,5 @@
-import { useSearch } from '../hooks/useSearch'
-import { MovieCard } from './Movie/MovieCard'
+import { useSearch } from '../../hooks/useSearch'
+import { MovieCard } from '../Movie/MovieCard'
 
 export function SearchPage() {
   const { query, results, setQuery } = useSearch()
