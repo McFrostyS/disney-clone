@@ -16,7 +16,7 @@ export const BrandPage = () => {
         <div className='background'>
           <video
             autoPlay
-            src={`/src/assets/videos/${brand}-bg.mp4`}
+            src={`/assets/videos/${brand}-bg.mp4`}
             onEnded={(e) => e.currentTarget.load()}
             className='w-full'
           ></video>
