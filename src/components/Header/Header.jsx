@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/Images/logo.png'
+import logo from '../../assets/images/logo.png'
 import AddRoundedIcon from '@mui/icons-material/AddRounded'
 import HeaderItem from './HeaderItem'
 
