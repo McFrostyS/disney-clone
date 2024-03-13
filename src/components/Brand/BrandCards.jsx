@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom'
 
-import disney from '../../assets/images/disney.png'
-import marvel from '../../assets/images/marvel.png'
-import nationalGeographic from '../../assets/images/nationalG.png'
-import pixar from '../../assets/images/pixar.png'
-import starwar from '../../assets/images/starwar.png'
-import star from '../../assets/images/star.png'
+import disney from '../../../public/assets/images/disney.png'
+import marvel from '../../../public/assets/images/marvel.png'
+import nationalGeographic from '../../../public/assets/images/nationalG.png'
+import pixar from '../../../public/assets/images/pixar.png'
+import starwar from '../../../public/assets/images/starwar.png'
+import star from '../../../public/assets/images/star.png'
 
-import disneyVideo from '../../assets/videos/disney.mp4'
-import pixarVideo from '../../assets/videos/pixar.mp4'
-import marvelVideo from '../../assets/videos/marvel.mp4'
-import starwarVideo from '../../assets/videos/star-wars.mp4'
-import nationalGeographicVideo from '../../assets/videos/national-geographic.mp4'
-import starVideo from '../../assets/videos/star.mp4'
+import disneyVideo from '../../../public/assets/videos/disney.mp4'
+import pixarVideo from '../../../public/assets/videos/pixar.mp4'
+import marvelVideo from '../../../public/assets/videos/marvel.mp4'
+import starwarVideo from '../../../public/assets/videos/star-wars.mp4'
+import nationalGeographicVideo from '../../../public/assets/videos/national-geographic.mp4'
+import starVideo from '../../../public/assets/videos/star.mp4'
 
 const productionHouseList = [
   {

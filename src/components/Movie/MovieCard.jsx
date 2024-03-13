@@ -1,6 +1,6 @@
 import { imageUrlBaseOriginal } from '../../services/api'
 import { Link } from 'react-router-dom'
-import defaultImage from '../../assets/images/imageNotFound.png'
+import defaultImage from '../../../public/assets/images/imageNotFound.png'
 
 export function MovieCard({ movie }) {
   const imageUrl = movie.backdrop_path
